@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@uiw/react-textarea-code-editor':
         specifier: ^3.0.2
-        version: 3.0.2(@babel/runtime@7.23.5)(react-dom@18.2.0)(react@18.2.0)
+        version: 3.0.2(@babel/runtime@7.23.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.2.1(vite@5.1.4)
+        version: 4.2.1(vite@5.1.4(@types/node@20.10.4)(sass@1.69.5))
       '@webcontainer/api':
         specifier: ^1.1.5
         version: 1.1.8
@@ -22,7 +22,7 @@ importers:
         version: 2.0.0
       framer-motion:
         specifier: ^7.6.1
-        version: 7.10.3(react-dom@18.2.0)(react@18.2.0)
+        version: 7.10.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       isomorphic-fetch:
         specifier: ^3.0.0
         version: 3.0.0
@@ -30,8 +30,8 @@ importers:
         specifier: ^3.0.0
         version: 3.1.0
       pyodide:
-        specifier: ^0.25.0
-        version: 0.25.0
+        specifier: ^0.26.4
+        version: 0.26.4
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -46,7 +46,7 @@ importers:
         version: 4.12.0(react@18.2.0)
       react-use:
         specifier: ^17.4.0
-        version: 17.4.2(react-dom@18.2.0)(react@18.2.0)
+        version: 17.4.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       vitest:
         specifier: ^0.24.3
         version: 0.24.5(sass@1.69.5)
@@ -62,7 +62,7 @@ importers:
         version: 18.2.17
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.1.0
-        version: 6.13.2(@typescript-eslint/parser@6.13.2)(eslint@8.55.0)(typescript@5.3.3)
+        version: 6.13.2(@typescript-eslint/parser@6.13.2(eslint@8.55.0)(typescript@5.3.3))(eslint@8.55.0)(typescript@5.3.3)
       '@typescript-eslint/parser':
         specifier: ^6.1.0
         version: 6.13.2(eslint@8.55.0)(typescript@5.3.3)
@@ -77,13 +77,13 @@ importers:
         version: 8.10.0(eslint@8.55.0)
       eslint-plugin-import:
         specifier: ^2.25.2
-        version: 2.29.0(@typescript-eslint/parser@6.13.2)(eslint@8.55.0)
+        version: 2.29.0(@typescript-eslint/parser@6.13.2(eslint@8.55.0)(typescript@5.3.3))(eslint@8.55.0)
       eslint-plugin-n:
         specifier: '^15.0.0 || ^16.0.0 '
         version: 16.3.1(eslint@8.55.0)
       eslint-plugin-prettier:
         specifier: ^5.0.0
-        version: 5.0.1(eslint-config-prettier@8.10.0)(eslint@8.55.0)(prettier@3.1.0)
+        version: 5.0.1(eslint-config-prettier@8.10.0(eslint@8.55.0))(eslint@8.55.0)(prettier@3.1.0)
       eslint-plugin-promise:
         specifier: ^6.0.0
         version: 6.1.1(eslint@8.55.0)
@@ -98,7 +98,7 @@ importers:
         version: 0.4.1(prettier@3.1.0)
       rollup-plugin-visualizer:
         specifier: ^5.8.3
-        version: 5.10.0
+        version: 5.10.0(rollup@4.12.0)
       sass:
         specifier: ^1.64.1
         version: 1.69.5
@@ -110,10 +110,10 @@ importers:
         version: 5.3.3
       vite:
         specifier: ^5.1.4
-        version: 5.1.4(sass@1.69.5)
+        version: 5.1.4(@types/node@20.10.4)(sass@1.69.5)
       vite-plugin-wasm:
         specifier: ^3.3.0
-        version: 3.3.0(vite@5.1.4)
+        version: 3.3.0(vite@5.1.4(@types/node@20.10.4)(sass@1.69.5))
 
 packages:
 
@@ -774,9 +774,6 @@ packages:
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
-
-  base-64@1.0.0:
-    resolution: {integrity: sha512-kwDPIFCGx0NZHog36dj+tHiwP4QMzsZ3AgMViUBKI0+V5n4U0ufTCUMhnQ04diaRI8EX/QcPfql7zlhZ7j4zgg==}
 
   big-integer@1.6.52:
     resolution: {integrity: sha512-QxD8cf2eVqJOOz63z6JIN9BzvVs/dlySa5HGSBH5xtR8dPteIRQnBxxKqkNTiT6jbDTF6jAfrd4oMcND9RGbQg==}
@@ -2137,8 +2134,9 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  pyodide@0.25.0:
-    resolution: {integrity: sha512-RagtX3TfV2M0QAfThG2SMvwE31ikqAFDUXc5/4xhppEoVf4VbL7L0kbKOIdSNg7MbVsHELVxftk66WvT926GpA==}
+  pyodide@0.26.4:
+    resolution: {integrity: sha512-z2CHsjVlhhJi5tYBF0AYAfNEPo3zq/z+xOpFtk1tweJkRaTqU4UK/7pLvo8DBU2VDPH31vB3pSI+8fnoqrVrFg==}
+    engines: {node: '>=18.0.0'}
 
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
@@ -3260,7 +3258,7 @@ snapshots:
 
   '@types/unist@3.0.2': {}
 
-  '@typescript-eslint/eslint-plugin@6.13.2(@typescript-eslint/parser@6.13.2)(eslint@8.55.0)(typescript@5.3.3)':
+  '@typescript-eslint/eslint-plugin@6.13.2(@typescript-eslint/parser@6.13.2(eslint@8.55.0)(typescript@5.3.3))(eslint@8.55.0)(typescript@5.3.3)':
     dependencies:
       '@eslint-community/regexpp': 4.10.0
       '@typescript-eslint/parser': 6.13.2(eslint@8.55.0)(typescript@5.3.3)
@@ -3275,6 +3273,7 @@ snapshots:
       natural-compare: 1.4.0
       semver: 7.5.4
       ts-api-utils: 1.0.3(typescript@5.3.3)
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -3287,6 +3286,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 6.13.2
       debug: 4.3.4
       eslint: 8.55.0
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -3303,6 +3303,7 @@ snapshots:
       debug: 4.3.4
       eslint: 8.55.0
       ts-api-utils: 1.0.3(typescript@5.3.3)
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -3318,6 +3319,7 @@ snapshots:
       is-glob: 4.0.3
       semver: 7.5.4
       ts-api-utils: 1.0.3(typescript@5.3.3)
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -3341,7 +3343,7 @@ snapshots:
       '@typescript-eslint/types': 6.13.2
       eslint-visitor-keys: 3.4.3
 
-  '@uiw/react-textarea-code-editor@3.0.2(@babel/runtime@7.23.5)(react-dom@18.2.0)(react@18.2.0)':
+  '@uiw/react-textarea-code-editor@3.0.2(@babel/runtime@7.23.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.23.5
       react: 18.2.0
@@ -3351,14 +3353,14 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitejs/plugin-react@4.2.1(vite@5.1.4)':
+  '@vitejs/plugin-react@4.2.1(vite@5.1.4(@types/node@20.10.4)(sass@1.69.5))':
     dependencies:
       '@babel/core': 7.23.5
       '@babel/plugin-transform-react-jsx-self': 7.23.3(@babel/core@7.23.5)
       '@babel/plugin-transform-react-jsx-source': 7.23.3(@babel/core@7.23.5)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.0
-      vite: 5.1.4(sass@1.69.5)
+      vite: 5.1.4(@types/node@20.10.4)(sass@1.69.5)
     transitivePeerDependencies:
       - supports-color
 
@@ -3476,8 +3478,6 @@ snapshots:
   bail@2.0.2: {}
 
   balanced-match@1.0.2: {}
-
-  base-64@1.0.0: {}
 
   big-integer@1.6.52: {}
 
@@ -3915,10 +3915,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.13.2)(eslint-import-resolver-node@0.3.9)(eslint@8.55.0):
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.13.2(eslint@8.55.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint@8.55.0):
     dependencies:
-      '@typescript-eslint/parser': 6.13.2(eslint@8.55.0)(typescript@5.3.3)
       debug: 3.2.7
+    optionalDependencies:
+      '@typescript-eslint/parser': 6.13.2(eslint@8.55.0)(typescript@5.3.3)
       eslint: 8.55.0
       eslint-import-resolver-node: 0.3.9
     transitivePeerDependencies:
@@ -3931,9 +3932,8 @@ snapshots:
       eslint: 8.55.0
       eslint-compat-utils: 0.1.2(eslint@8.55.0)
 
-  eslint-plugin-import@2.29.0(@typescript-eslint/parser@6.13.2)(eslint@8.55.0):
+  eslint-plugin-import@2.29.0(@typescript-eslint/parser@6.13.2(eslint@8.55.0)(typescript@5.3.3))(eslint@8.55.0):
     dependencies:
-      '@typescript-eslint/parser': 6.13.2(eslint@8.55.0)(typescript@5.3.3)
       array-includes: 3.1.7
       array.prototype.findlastindex: 1.2.3
       array.prototype.flat: 1.3.2
@@ -3942,7 +3942,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.55.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.13.2)(eslint-import-resolver-node@0.3.9)(eslint@8.55.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.13.2(eslint@8.55.0)(typescript@5.3.3))(eslint-import-resolver-node@0.3.9)(eslint@8.55.0)
       hasown: 2.0.0
       is-core-module: 2.13.1
       is-glob: 4.0.3
@@ -3952,6 +3952,8 @@ snapshots:
       object.values: 1.1.7
       semver: 6.3.1
       tsconfig-paths: 3.14.2
+    optionalDependencies:
+      '@typescript-eslint/parser': 6.13.2(eslint@8.55.0)(typescript@5.3.3)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -3971,13 +3973,14 @@ snapshots:
       resolve: 1.22.8
       semver: 7.5.4
 
-  eslint-plugin-prettier@5.0.1(eslint-config-prettier@8.10.0)(eslint@8.55.0)(prettier@3.1.0):
+  eslint-plugin-prettier@5.0.1(eslint-config-prettier@8.10.0(eslint@8.55.0))(eslint@8.55.0)(prettier@3.1.0):
     dependencies:
       eslint: 8.55.0
-      eslint-config-prettier: 8.10.0(eslint@8.55.0)
       prettier: 3.1.0
       prettier-linter-helpers: 1.0.0
       synckit: 0.8.6
+    optionalDependencies:
+      eslint-config-prettier: 8.10.0(eslint@8.55.0)
 
   eslint-plugin-promise@6.1.1(eslint@8.55.0):
     dependencies:
@@ -4150,7 +4153,7 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  framer-motion@7.10.3(react-dom@18.2.0)(react@18.2.0):
+  framer-motion@7.10.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@motionone/dom': 10.16.4
       hey-listen: 1.0.8
@@ -4694,7 +4697,7 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  nano-css@5.6.1(react-dom@18.2.0)(react@18.2.0):
+  nano-css@5.6.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
       css-tree: 1.1.3
@@ -4876,8 +4879,9 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.4.32):
     dependencies:
       lilconfig: 3.0.0
-      postcss: 8.4.32
       yaml: 2.3.4
+    optionalDependencies:
+      postcss: 8.4.32
 
   postcss-nested@6.0.1(postcss@8.4.32):
     dependencies:
@@ -4925,9 +4929,8 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  pyodide@0.25.0:
+  pyodide@0.26.4:
     dependencies:
-      base-64: 1.0.0
       ws: 8.14.2
     transitivePeerDependencies:
       - bufferutil
@@ -4974,7 +4977,7 @@ snapshots:
       react: 18.2.0
       tslib: 2.6.2
 
-  react-use@17.4.2(react-dom@18.2.0)(react@18.2.0):
+  react-use@17.4.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@types/js-cookie': 2.2.7
       '@xobotyi/scrollbar-width': 1.9.5
@@ -4982,7 +4985,7 @@ snapshots:
       fast-deep-equal: 3.1.3
       fast-shallow-equal: 1.0.0
       js-cookie: 2.2.1
-      nano-css: 5.6.1(react-dom@18.2.0)(react@18.2.0)
+      nano-css: 5.6.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-universal-interface: 0.6.2(react@18.2.0)(tslib@2.6.2)
@@ -5090,12 +5093,14 @@ snapshots:
     dependencies:
       glob: 7.2.3
 
-  rollup-plugin-visualizer@5.10.0:
+  rollup-plugin-visualizer@5.10.0(rollup@4.12.0):
     dependencies:
       open: 8.4.2
       picomatch: 2.3.1
       source-map: 0.7.4
       yargs: 17.7.2
+    optionalDependencies:
+      rollup: 4.12.0
 
   rollup@2.79.1:
     optionalDependencies:
@@ -5550,29 +5555,30 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite-plugin-wasm@3.3.0(vite@5.1.4):
+  vite-plugin-wasm@3.3.0(vite@5.1.4(@types/node@20.10.4)(sass@1.69.5)):
     dependencies:
-      vite: 5.1.4(sass@1.69.5)
+      vite: 5.1.4(@types/node@20.10.4)(sass@1.69.5)
 
   vite@3.2.7(@types/node@20.10.4)(sass@1.69.5):
     dependencies:
-      '@types/node': 20.10.4
       esbuild: 0.15.18
       postcss: 8.4.32
       resolve: 1.22.8
       rollup: 2.79.1
-      sass: 1.69.5
     optionalDependencies:
+      '@types/node': 20.10.4
       fsevents: 2.3.3
+      sass: 1.69.5
 
-  vite@5.1.4(sass@1.69.5):
+  vite@5.1.4(@types/node@20.10.4)(sass@1.69.5):
     dependencies:
       esbuild: 0.19.12
       postcss: 8.4.35
       rollup: 4.12.0
-      sass: 1.69.5
     optionalDependencies:
+      '@types/node': 20.10.4
       fsevents: 2.3.3
+      sass: 1.69.5
 
   vitest@0.24.5(sass@1.69.5):
     dependencies:
@@ -5682,8 +5688,9 @@ snapshots:
 
   zustand@4.4.7(@types/react@18.2.42)(react@18.2.0):
     dependencies:
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    optionalDependencies:
       '@types/react': 18.2.42
       react: 18.2.0
-      use-sync-external-store: 1.2.0(react@18.2.0)
 
   zwitch@2.0.4: {}
