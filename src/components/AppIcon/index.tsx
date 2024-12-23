@@ -13,8 +13,8 @@ export default function AppIcon({
   defaultPosition,
   isDraggable,
   title,
-  width = 80,
-  height = 80,
+  width = 60,
+  height = 60,
   icon,
 }: IAppIconProps) {
   const updatePos = useIconsStore((state) => state.updatePos)
@@ -90,7 +90,7 @@ export default function AppIcon({
         />
         <strong
           style={{ width: width * 1.2 }}
-          className={clsx("break-words text-center", {
+          className={clsx("break-words text-center text-sm", {
             "text-white": showAppBg,
             "text-black": !showAppBg,
           })}
